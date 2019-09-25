@@ -11,7 +11,7 @@ function Page() {
         return (<div>I will be the gameplay page</div>);
     }
     else if (currentPage === 'score') {
-        return (< Score />);
+        return (< Score score={score} />);
     }
     return (
         <div className="Page">
