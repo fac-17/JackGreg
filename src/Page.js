@@ -1,4 +1,5 @@
 import React from 'react';
+import Hula from './Hula';
 
 function Page() {
     const [currentPage, setCurrentPage] = React.useState('form');
@@ -6,7 +7,7 @@ function Page() {
         return (<div>I will be a Form</div>);
     }
     else if (currentPage === 'hula') {
-        return (<div>I will be the gameplay page</div>);
+        return (< Hula />);
     }
     else if (currentPage === 'score') {
         return (<div>I will be the score summary</div>);
