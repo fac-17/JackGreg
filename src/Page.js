@@ -1,9 +1,10 @@
 import React from "react";
+import Form from "./Form";
 
 const Page = () => {
   const [currentPage, setCurrentPage] = React.useState("form");
   if (currentPage === "form") {
-    return <div>I will be a Form</div>;
+    return <Form />;
   } else if (currentPage === "hula") {
     return <div>I will be the gameplay page</div>;
   } else if (currentPage === "score") {

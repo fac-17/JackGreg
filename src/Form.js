@@ -12,3 +12,5 @@ const Form = props => {
     </section>
   );
 };
+
+export default Form;
