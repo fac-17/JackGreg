@@ -1,13 +1,13 @@
-import React from 'react';
-import Page from './Page';
-import './App.css';
+import React from "react";
+import Page from "./Page";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      < Page />
+      <Page />
     </div>
   );
-}
+};
 
 export default App;
