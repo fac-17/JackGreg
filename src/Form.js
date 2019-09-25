@@ -1,6 +1,8 @@
 import React from "react";
 
 const Form = ({ user, setUser }) => {
+  const url = `https://api.github.com/users/${user}`;
+
   return (
     <section>
       <form>
