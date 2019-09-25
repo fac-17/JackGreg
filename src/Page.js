@@ -3,6 +3,7 @@ import Score from './Score';
 
 function Page() {
     const [currentPage, setCurrentPage] = React.useState('score');
+    const [score, setScore] = React.useState(0);
     if (currentPage === 'form') {
         return (<div>I will be a Form</div>);
     }

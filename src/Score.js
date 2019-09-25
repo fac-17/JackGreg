@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Score = () => {
+const Score = ({ score }) => {
     return (
         <div className="Score">
             Your score is 20
