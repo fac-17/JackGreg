@@ -1,7 +1,7 @@
 import React from "react";
 import getUserData from "./utils/getUserData";
 
-const Form = ({ username, setUsername, userData, setUserData }) => {
+const Form = ({ username, setUsername, userData, setUserData, setCurrentPage }) => {
   const url = `https://api.github.com/users/${username}`;
 
   const handleSubmit = event => {
@@ -9,9 +9,9 @@ const Form = ({ username, setUsername, userData, setUserData }) => {
     setUserData(event.target.value);
     getUserData(url)
       .then(response => response.json())
-      .then(data => setUserData({ name: data.name, avatar_url: data.avatar_url }));
+      .then(data => setUserData({ name: data.name, avatar_url: data.avatar_url })).then(() => setCurrentPage('hula'));
   };
-  console.log(userData);
+
   return (
     <section>
       <form>

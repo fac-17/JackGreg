@@ -18,11 +18,12 @@ const Page = () => {
         setUsername={setUsername}
         userData={userData}
         setUserData={setUserData}
+        setCurrentPage={setCurrentPage}
       />
     );
   } else if (currentPage === "hula") {
     return (
-      <Hula setScore={setScore} score={score} setCurrentPage={setCurrentPage} />
+      <Hula setScore={setScore} score={score} setCurrentPage={setCurrentPage} userData={userData} />
     );
   } else if (currentPage === "score") {
     return <Score score={score} />;
