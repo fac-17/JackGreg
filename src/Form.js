@@ -9,9 +9,9 @@ const Form = ({ username, setUsername, userData, setUserData }) => {
     setUserData(event.target.value);
     getUserData(url)
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => setUserData({ name: data.name, avatar_url: data.avatar_url }));
   };
-
+  console.log(userData);
   return (
     <section>
       <form>
