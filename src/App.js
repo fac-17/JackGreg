@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "./Page";
 import Header from "./Header";
+import Footer from "./Footer.js";
 import "./App.css";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Page />
+      <Footer />
     </div>
   );
 };
