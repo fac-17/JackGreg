@@ -1,13 +1,22 @@
 import React from "react";
+import getUserData from "./utils/getUserData";
 
-const Form = ({ user, setUser }) => {
-  const url = `https://api.github.com/users/${user}`;
+const Form = ({ username, setUsername, userData, setUserData }) => {
+  const url = `https://api.github.com/users/${username}`;
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setUserData(event.target.value);
+    getUserData(url)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  };
 
   return (
     <section>
       <form>
-        <input type="text" value={user} />
-        <button onClick={event => setUser(event.target.value)}>Choose</button>
+        <input type="text" value={username} />
+        <button onClick={handleSubmit}>Choose</button>
       </form>
     </section>
   );
