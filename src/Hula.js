@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Hula({ setScore, score, setCurrentPage }) {
+const Hula = ({ setScore, score, setCurrentPage }) => {
     const increaseScore = () => {
         setScore(score + 1)
     }
     const endGame = () => {
-        setCurrentPage('score')
+        setCurrentPage('score');
     }
 
     return (<div>
