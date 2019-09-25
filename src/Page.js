@@ -1,7 +1,9 @@
 import React from 'react';
+import Score from './Score';
 
 function Page() {
-    const [currentPage, setCurrentPage] = React.useState('form');
+    const [currentPage, setCurrentPage] = React.useState('score');
+    const [score, setScore] = React.useState(0);
     if (currentPage === 'form') {
         return (<div>I will be a Form</div>);
     }
@@ -9,7 +11,7 @@ function Page() {
         return (<div>I will be the gameplay page</div>);
     }
     else if (currentPage === 'score') {
-        return (<div>I will be the score summary</div>);
+        return (< Score score={score} />);
     }
     return (
         <div className="Page">
