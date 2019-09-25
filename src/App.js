@@ -1,15 +1,17 @@
-import React from 'react';
-import Page from './Page';
-import Footer from './Footer.js'
-import './App.css';
+import React from "react";
+import Page from "./Page";
+import Header from "./Header";
+import Footer from "./Footer.js";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      < Page />
-      < Footer />
+      <Header />
+      <Page />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
