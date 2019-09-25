@@ -4,6 +4,7 @@ import Header from "./Header";
 import "./App.css";
 
 const App = () => {
+  const [user, setUser] = React.useState("jackbridger");
   return (
     <div className="App">
       <Header />
