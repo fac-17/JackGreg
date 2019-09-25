@@ -15,7 +15,11 @@ const Form = ({ username, setUsername, userData, setUserData }) => {
   return (
     <section>
       <form>
-        <input type="text" value={username} />
+        <input
+          type="text"
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
         <button onClick={handleSubmit}>Choose</button>
       </form>
     </section>
