@@ -1,13 +1,11 @@
 import React from "react";
 
-const Form = props => {
+const Form = ({ user, setUser }) => {
   return (
     <section>
       <form>
-        <input type="text" value={props.user} />
-        <button onClick={event => props.setUser(event.target.value)}>
-          Choose
-        </button>
+        <input type="text" value={user} />
+        <button onClick={event => setUser(event.target.value)}>Choose</button>
       </form>
     </section>
   );
