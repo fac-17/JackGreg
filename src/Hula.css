@@ -8,3 +8,10 @@
   width: 20vw;
   border-radius: 50%;
 }
+
+#safe-zone {
+  border-top: 0.1em dashed red;
+  border-bottom: 0.1em dashed red;
+  padding: 5vw;
+  position: absolute;
+}
