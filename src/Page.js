@@ -34,7 +34,9 @@ const Page = () => {
       />
     );
   } else if (currentPage === "score") {
-    return <Score score={score} />;
+    return <Score
+      userData={userData}
+      score={score} />;
   }
   return <div className="Page">...Loading...</div>;
 };
