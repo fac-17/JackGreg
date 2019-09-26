@@ -66,14 +66,14 @@ const Hula = ({
       <article id="hula--container">
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
         <img src="./stickman.svg" alt="Stickman body" id="stickman" />
-      </article>
-      <article id="safe-zone">
-        <img
-          src="./hoop.svg"
-          alt="Hula hoop"
-          id="hula"
-          className={`hoopPosition${currentPosition}`}
-        />
+        <article id="safe-zone">
+          <img
+            src="./hoop.svg"
+            alt="Hula hoop"
+            id="hula"
+            className={`hoopPosition${currentPosition}`}
+          />
+        </article>
       </article>
       <article id="position--buttons">
         <button id="button--left" onClick={moveHoopUp}>
