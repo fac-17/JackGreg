@@ -9,7 +9,7 @@ const Page = () => {
     name: "Jack",
     avatar_url: ""
   });
-  const [username, setUsername] = React.useState("oliversw");
+  const [username, setUsername] = React.useState("jackbridger");
   const [score, setScore] = React.useState(0);
   if (currentPage === "form") {
     return (
