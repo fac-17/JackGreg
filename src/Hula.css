@@ -32,6 +32,7 @@
 
 .hoopPosition2 {
   top: 1.2em;
+  left: 0.3em;
 }
 
 .hoopPosition3 {
@@ -40,14 +41,17 @@
 
 .hoopPosition4 {
   top: 2.4em;
+  left: 0.3em;
 }
 
 .hoopPosition5 {
   top: 3em;
+  right: 0.3em;
 }
 
 .hoopPosition-1 {
   top: -0.6em;
+  left: 0.3em;
 }
 
 .hoopPosition-2 {
@@ -56,12 +60,15 @@
 
 .hoopPosition-3 {
   top: -1.8em;
+  left: 0.3em;
 }
 
 .hoopPosition-4 {
   top: -2.4em;
+  right: 0.3em;
 }
 
 .hoopPosition-5 {
   top: -3em;
+  right: 0.3em;
 }

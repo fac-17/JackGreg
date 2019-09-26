@@ -16,9 +16,9 @@ const Hula = ({
 
   React.useEffect(() => {
     if (Math.random() > 0.5) {
-      setPosition(position => position + 1);
+      setPosition(position => position + 2);
     } else {
-      setPosition(position => position - 1);
+      setPosition(position => position - 2);
     }
     if (tick < 0 || currentPosition > 5 || currentPosition < -5) {
       setCurrentPage("score");
@@ -26,7 +26,7 @@ const Hula = ({
       setScore(score => score + 1);
       setTimeout(() => {
         setTick(oldTick => oldTick + 1);
-      }, 1000);
+      }, 500);
     }
   }, [tick]);
 
@@ -63,7 +63,6 @@ const Hula = ({
 
   return (
     <div id="hula--body">
-      <p id="welcome--text">Welcome to the game, {userData.name}</p>
       <article id="hula--container">
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
         <img src="./stickman.svg" alt="Stickman body" id="stickman" />
