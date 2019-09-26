@@ -1,6 +1,7 @@
 import React from 'react';
+import getUserData from './utils/getUserData';
 
-const Hula = ({ setScore, score, setCurrentPage }) => {
+const Hula = ({ setScore, score, setCurrentPage, userData }) => {
     const increaseScore = () => {
         setScore(score + 1)
     }
@@ -9,7 +10,7 @@ const Hula = ({ setScore, score, setCurrentPage }) => {
     }
 
     return (<div>
-        <p>I am the hulaa</p>
+        <p>welcome to the game {userData.name}</p>
         <button onClick={increaseScore}>Increase Hula score</button>
         <button onClick={endGame}> End game</button>
         <div>{score}</div>
