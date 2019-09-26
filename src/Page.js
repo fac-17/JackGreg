@@ -9,7 +9,7 @@ const Page = () => {
     name: "Jack",
     avatar_url: ""
   });
-  const [username, setUsername] = React.useState("jackbridger");
+  const [username, setUsername] = React.useState("oliversw");
   const [score, setScore] = React.useState(0);
   if (currentPage === "form") {
     return (
@@ -23,7 +23,12 @@ const Page = () => {
     );
   } else if (currentPage === "hula") {
     return (
-      <Hula setScore={setScore} score={score} setCurrentPage={setCurrentPage} userData={userData} />
+      <Hula
+        setScore={setScore}
+        score={score}
+        setCurrentPage={setCurrentPage}
+        userData={userData}
+      />
     );
   } else if (currentPage === "score") {
     return <Score score={score} />;
