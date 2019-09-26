@@ -15,7 +15,9 @@ const Form = ({ username, setUsername, userData, setUserData, setCurrentPage }) 
   return (
     <section>
       <form>
+        <label htmlFor="username-form">Username</label>
         <input
+          id="username-form"
           type="text"
           value={username}
           onChange={event => setUsername(event.target.value)}
