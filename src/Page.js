@@ -11,6 +11,7 @@ const Page = () => {
   });
   const [username, setUsername] = React.useState("jackbridger");
   const [score, setScore] = React.useState(0);
+  const [inPlay, setInPlay] = React.useState(false);
   if (currentPage === "form") {
     return (
       <Form
@@ -23,7 +24,14 @@ const Page = () => {
     );
   } else if (currentPage === "hula") {
     return (
-      <Hula setScore={setScore} score={score} setCurrentPage={setCurrentPage} userData={userData} />
+      <Hula
+        setScore={setScore}
+        score={score}
+        inPlay={inPlay}
+        setInPlay={setInPlay}
+        setCurrentPage={setCurrentPage}
+        userData={userData}
+      />
     );
   } else if (currentPage === "score") {
     return <Score score={score} />;

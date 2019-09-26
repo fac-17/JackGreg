@@ -15,7 +15,7 @@ const Header = () => {
           <p>Restart</p>
         </section>
       </section>
-      <img className="elipses" src="./Elipses.png" alt="elipses" />
+      {/* <img className="elipses" src="./elipses.png" alt="elipses" /> */}
     </header>
   );
 };
