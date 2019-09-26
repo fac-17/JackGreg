@@ -1,26 +1,30 @@
 import React from "react";
 import "./Hula.css";
 
-const Hula = ({ setScore, score, setCurrentPage, userData }) => {
+const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) => {
   // Handle hoop position
 
   const [currentPosition, setPosition] = React.useState(0);
-
+  const timeBetweenChecks = 500;
   const moveHoopUp = () => {
-    setPosition(currentPosition + 1);
+    setPosition(oldPosition => oldPosition + 1);
   };
 
   const moveHoopDown = () => {
-    setPosition(currentPosition - 1);
+    setPosition(oldPosition => oldPosition - 1);
   };
 
   // Increase Score
 
   const increaseScore = () => {
-    setScore(score + 1);
+    setScore(oldScore => oldScore + 1);
+
   };
 
-  const endGame = () => {
+  const endGame = (id) => {
+    console.log('id is ', id);
+    window.clearInterval(id);
+    setInPlay(false);
     setCurrentPage("score");
   };
 
@@ -36,25 +40,31 @@ const Hula = ({ setScore, score, setCurrentPage, userData }) => {
 
   React.useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
 
       // Help..?!
-      clearInterval(window.interval);
+      // clearInterval(window.interval);
     };
   }, []);
 
-  const gameProgressChecker = () => {
+  const gameProgressChecker = (id) => {
+    console.log('progress game id ', id);
+    console.log(currentPosition)
     if (currentPosition > 5 || currentPosition < -5) {
-      endGame();
+      console.log('passing id to endgame', id);
+      endGame(id);
     } else {
       increaseScore();
     }
   };
 
   const startGame = () => {
-    window.setInterval(gameProgressChecker, 5000);
+    setInPlay(true);
+    const id = window.setInterval(() => {
+      gameProgressChecker(id);
+    }, timeBetweenChecks)
+
   };
 
   return (
