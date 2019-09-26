@@ -5,7 +5,23 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
   // Handle hoop position
 
   const [currentPosition, setPosition] = React.useState(0);
-  const timeBetweenChecks = 500;
+  const [tick, setTick] = React.useState(0);
+
+  React.useEffect(() => {
+    console.log(tick);
+    console.log('currpos is,', currentPosition);
+    if (tick < 0 || currentPosition > 5 || currentPosition < -5) {
+      setCurrentPage('score');
+    }
+    else if (tick > 0) {
+      setScore(score => score + 1)
+      setTimeout(() => {
+        setTick(oldTick => oldTick + 1);
+      }, 1000)
+    }
+  }, [tick])
+
+
   const moveHoopUp = () => {
     setPosition(oldPosition => oldPosition + 1);
   };
@@ -21,12 +37,6 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
 
   };
 
-  const endGame = (id) => {
-    console.log('id is ', id);
-    window.clearInterval(id);
-    setInPlay(false);
-    setCurrentPage("score");
-  };
 
   // Add event Listener
 
@@ -43,29 +53,8 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
 
-      // Help..?!
-      // clearInterval(window.interval);
     };
   }, []);
-
-  const gameProgressChecker = (id) => {
-    console.log('progress game id ', id);
-    console.log(currentPosition)
-    if (currentPosition > 5 || currentPosition < -5) {
-      console.log('passing id to endgame', id);
-      endGame(id);
-    } else {
-      increaseScore();
-    }
-  };
-
-  const startGame = () => {
-    setInPlay(true);
-    const id = window.setInterval(() => {
-      gameProgressChecker(id);
-    }, timeBetweenChecks)
-
-  };
 
   return (
     <div id="hula--body">
@@ -85,9 +74,9 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
           RIGHT
         </button>
       </article>
-      <button onClick={startGame}> start game</button>
+      <button onClick={() => setTick(1)}> start game</button>
       <button onClick={increaseScore}>Increase Hula score</button>
-      <button onClick={endGame}> End game</button>
+      <button onClick={() => setTick(-1)}> End game</button>
       <div>{score}</div>
     </div>
   );
