@@ -14,8 +14,54 @@
   border-bottom: 0.1em dashed red;
   padding: 5vw;
   position: absolute;
+  top: 68%;
+  left: 27%;
 }
 
 #hula--body {
   margin-bottom: 10vh;
+}
+
+#hula {
+  position: relative;
+}
+
+.hoopPosition1 {
+  top: 0.6em;
+}
+
+.hoopPosition2 {
+  top: 1.2em;
+}
+
+.hoopPosition3 {
+  top: 1.8em;
+}
+
+.hoopPosition4 {
+  top: 2.4em;
+}
+
+.hoopPosition5 {
+  top: 3em;
+}
+
+.hoopPosition-1 {
+  top: -0.6em;
+}
+
+.hoopPosition-2 {
+  top: -1.2em;
+}
+
+.hoopPosition-3 {
+  top: -1.8em;
+}
+
+.hoopPosition-4 {
+  top: -2.4em;
+}
+
+.hoopPosition-5 {
+  top: -3em;
 }

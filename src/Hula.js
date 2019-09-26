@@ -1,26 +1,34 @@
 import React from "react";
 import "./Hula.css";
 
-const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) => {
+const Hula = ({
+  setScore,
+  score,
+  setCurrentPage,
+  setInPlay,
+  inPlay,
+  userData
+}) => {
   // Handle hoop position
 
   const [currentPosition, setPosition] = React.useState(0);
   const [tick, setTick] = React.useState(0);
 
   React.useEffect(() => {
-    console.log(tick);
-    console.log('currpos is,', currentPosition);
-    if (tick < 0 || currentPosition > 5 || currentPosition < -5) {
-      setCurrentPage('score');
+    if (Math.random() > 0.5) {
+      setPosition(position => position + 1);
+    } else {
+      setPosition(position => position - 1);
     }
-    else if (tick > 0) {
-      setScore(score => score + 1)
+    if (tick < 0 || currentPosition > 5 || currentPosition < -5) {
+      setCurrentPage("score");
+    } else if (tick > 0) {
+      setScore(score => score + 1);
       setTimeout(() => {
         setTick(oldTick => oldTick + 1);
-      }, 1000)
+      }, 1000);
     }
-  }, [tick])
-
+  }, [tick]);
 
   const moveHoopUp = () => {
     setPosition(oldPosition => oldPosition + 1);
@@ -34,9 +42,7 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
 
   const increaseScore = () => {
     setScore(oldScore => oldScore + 1);
-
   };
-
 
   // Add event Listener
 
@@ -52,7 +58,6 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-
     };
   }, []);
 
@@ -63,9 +68,14 @@ const Hula = ({ setScore, score, setCurrentPage, setInPlay, inPlay, userData }) 
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
         <img src="./stickman.svg" alt="Stickman body" id="stickman" />
       </article>
-      {/* <article id="safe-zone">
-        <img src="./hoop.svg" alt="Hula hoop" id="hula" />
-      </article> */}
+      <article id="safe-zone">
+        <img
+          src="./hoop.svg"
+          alt="Hula hoop"
+          id="hula"
+          className={`hoopPosition${currentPosition}`}
+        />
+      </article>
       <article id="position--buttons">
         <button id="button--left" onClick={moveHoopUp}>
           LEFT
