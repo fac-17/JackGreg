@@ -7,7 +7,7 @@
     justify-content: space-between;    
     font-family: 'Ribeye', cursive;
 }
-img {
+.icons {
     height: 3rem;
 }
 .navbar--restart, .navbar--home {
