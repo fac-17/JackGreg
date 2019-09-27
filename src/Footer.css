@@ -1,25 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Ribeye&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Ribeye&display=swap");
 
 .footer-container {
-    background-color: #C4C4C4;
-    display: flex;
-    align-items: center;
-    justify-content: center ;    
-    font-family: 'Ribeye', cursive;
-    height: 3rem;
+  background-color: #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ribeye", cursive;
+  height: 3rem;
 }
 
-.navbar--restart, .navbar--home {
-    margin: 0.8rem 2rem;
-    padding: 0.5rem 0rem;
-}
 .footer-elipses {
-    width: 100%;
-    position: relative;
-    top: 15px;
+  width: 100%;
+  position: relative;
+  top: 15px;
 }
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
