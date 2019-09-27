@@ -74,7 +74,14 @@ const Hula = ({
     <div id="hula--body">
       <article id="hula--container">
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
-        <img src={currentStickman()} alt="Stickman body" id="stickman" />
+        <svg className="stickman" width="153" height="286" viewBox="0 0 153 286" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line className="stick-body" x1="75" x2="75" y2="143" stroke="black" stroke-width="20" />
+          <line className="stick-left" x1="74.5" y1="139.122" x2="27.5" y2="282.122" stroke="black" stroke-width="20" />
+          <line className="stick-arms" x1="150.903" y1="61.875" x2="1.311" y2="45.1382" stroke="black" stroke-width="20" />
+          <line className="stick-right" x1="76.012" y1="143.666" x2="139.012" y2="274.666" stroke="black" stroke-width="20" />
+        </svg>
+
+        {/* <img src={currentStickman()} alt="Stickman body" id="stickman" /> */}
         <article id="safe-zone">
           <img
             src="./hoop.svg"
