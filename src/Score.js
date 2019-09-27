@@ -1,7 +1,7 @@
 import React from "react";
 import "./Score.css";
 
-const Score = ({ score, userData }) => {
+const Score = ({ score, userData, setCurrentPage }) => {
   return (
     <div className="Score">
       <h2>
@@ -11,6 +11,7 @@ const Score = ({ score, userData }) => {
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
         <img src="./finalhula.svg" alt="Stickman body" id="finalstickman" />
       </article>
+      <button onClick={setCurrentPage("hula")}>Back</button>
     </div>
   );
 };
