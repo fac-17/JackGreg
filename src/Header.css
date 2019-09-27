@@ -6,24 +6,6 @@
   background-size: auto 18vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: "Ribeye", cursive;
-}
-.icons {
-  height: 2rem;
-}
-.navbar--restart,
-.navbar--home {
-  margin: 0 2rem;
-  padding: 0.5rem 0rem;
-}
-
-p {
-  margin: 0;
-}
-
-.elipses {
-  width: 100%;
-  position: relative;
-  top: -15px;
 }
