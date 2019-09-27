@@ -6,13 +6,11 @@
 }
 
 #avatar {
-  width: 20vw;
+  width: 15vw;
   border-radius: 50%;
 }
 
 #safe-zone {
-
-
   padding: 5vw;
   position: relative;
   top: -40vh;
@@ -41,7 +39,6 @@
 .hoopPosition2 {
   top: 1.2em;
   transition: top 0.2s ease;
-  /* left: 1em; */
 }
 
 .hoopPosition3 {
@@ -52,19 +49,16 @@
 .hoopPosition4 {
   top: 2.4em;
   transition: top 0.2s ease;
-  /* left: 1em; */
 }
 
 .hoopPosition5 {
   top: 3em;
   transition: top 0.1s ease;
-  /* right: 1em; */
 }
 
 .hoopPosition-1 {
   top: -0.6em;
   transition: top 0.1s ease;
-  /* left: 0.3em; */
 }
 
 .hoopPosition-2 {
@@ -74,19 +68,19 @@
 
 .hoopPosition-3 {
   top: -1.8em;
-  /* left: 1.2em; */
+
   transition: top 0.1s ease;
 }
 
 .hoopPosition-4 {
   top: -2.4em;
-  /* right: 0.6em; */
+
   transition: top 0.1s ease;
 }
 
 .hoopPosition-5 {
   top: -3em;
-  right: 1.2em;
+
   transition: top 0.1s ease;
 }
 
@@ -122,4 +116,3 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
