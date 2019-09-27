@@ -13,6 +13,15 @@ const Hula = ({
 
   const [currentPosition, setPosition] = React.useState(0);
   const [tick, setTick] = React.useState(0);
+  const currentStickman = () => {
+    if (Math.random() > 0.7) {
+      return "./stickman.svg";
+    } else if (Math.random() > 0.3) {
+      return "./stickmanleft.svg";
+    } else {
+      return "./stickmanright.svg";
+    }
+  };
 
   React.useEffect(() => {
     if (Math.random() > 0.5) {
@@ -65,7 +74,7 @@ const Hula = ({
     <div id="hula--body">
       <article id="hula--container">
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
-        <img src="./stickman.svg" alt="Stickman body" id="stickman" />
+        <img src={currentStickman()} alt="Stickman body" id="stickman" />
         <article id="safe-zone">
           <img
             src="./hoop.svg"
