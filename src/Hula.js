@@ -1,4 +1,5 @@
 import React from "react";
+import HulaHoop from './HulaHoop'
 import "./Hula.css";
 
 const Hula = ({
@@ -116,23 +117,12 @@ const Hula = ({
           />
         </svg>
 
+
+
         <article id="safe-zone">
-          <svg
-            width="265"
-            height="41"
-            alt="Hula hoop"
-            id="hula"
-            className={`hoop hoopPosition${currentPosition}`}
-            viewBox="0 0 265 41"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M263 20.5C263 20.9768 262.683 21.8405 261.102 23.0361C259.565 24.1979 257.173 25.404 253.9 26.6012C247.378 28.9872 237.826 31.1719 225.886 33.0192C202.037 36.709 169.019 39 132.5 39C95.9808 39 62.9628 36.709 39.1141 33.0192C27.1742 31.1719 17.6223 28.9872 11.0996 26.6012C7.82659 25.404 5.43466 24.1979 3.89813 23.0361C2.3168 21.8405 2 20.9768 2 20.5C2 20.0232 2.3168 19.1595 3.89813 17.9639C5.43466 16.8021 7.82659 15.596 11.0996 14.3988C17.6223 12.0128 27.1742 9.82811 39.1141 7.98079C62.9628 4.291 95.9808 2 132.5 2C169.019 2 202.037 4.291 225.886 7.98079C237.826 9.82811 247.378 12.0128 253.9 14.3988C257.173 15.596 259.565 16.8021 261.102 17.9639C262.683 19.1595 263 20.0232 263 20.5Z"
-              stroke="#3EBD2A"
-              stroke-width="4"
-            />
-          </svg>
+          <HulaHoop currentPosition={currentPosition} userData={userData} />
+
+
         </article>
       </article>
       <article id="position--buttons">
