@@ -11,7 +11,7 @@ const Score = ({ score, userData, setCurrentPage }) => {
         <img src={userData.avatar_url} alt="Your avatar" id="avatar" />
         <img src="./finalhula.svg" alt="Stickman body" id="finalstickman" />
       </article>
-      <button onClick={setCurrentPage("hula")}>Back</button>
+      <button onClick={() => setCurrentPage("hula")}>Back</button>
     </div>
   );
 };
