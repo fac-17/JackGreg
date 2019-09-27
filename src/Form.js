@@ -1,7 +1,14 @@
 import React from "react";
 import getUserData from "./utils/getUserData";
+import "./Form.css";
 
-const Form = ({ username, setUsername, userData, setUserData, setCurrentPage }) => {
+const Form = ({
+  username,
+  setUsername,
+  userData,
+  setUserData,
+  setCurrentPage
+}) => {
   const url = `https://api.github.com/users/${username}`;
 
   const handleSubmit = event => {
@@ -9,20 +16,28 @@ const Form = ({ username, setUsername, userData, setUserData, setCurrentPage }) 
     setUserData(event.target.value);
     getUserData(url)
       .then(response => response.json())
-      .then(data => setUserData({ name: data.name, avatar_url: data.avatar_url })).then(() => setCurrentPage('hula'));
+      .then(data =>
+        setUserData({ name: data.name, avatar_url: data.avatar_url })
+      )
+      .then(() => setCurrentPage("hula"));
   };
 
   return (
-    <section>
-      <form>
-        <label htmlFor="username-form">Username</label>
+    <section id="input-section">
+      <form id="input-form">
+        <label htmlFor="username-form" class="input-form--element">
+          Username
+        </label>
         <input
           id="username-form"
           type="text"
           value={username}
+          class="input-form--element"
           onChange={event => setUsername(event.target.value)}
         />
-        <button onClick={handleSubmit}>Choose</button>
+        <button onClick={handleSubmit} class="input-form--element">
+          Choose
+        </button>
       </form>
     </section>
   );
