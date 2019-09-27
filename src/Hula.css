@@ -76,12 +76,6 @@
 }
 
 
-.stick-left {
-  
-}
-.stick-left {
-
-}
 
 @keyframes move-body {
   from {
@@ -93,44 +87,10 @@
   }
 }
 
-.stick-body {
+.stickman {
   animation-duration: 0.5s;
   animation-name: move-body;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes move-leg-left {
-  from {
-    transform: rotate(-20deg) translateX(-100px);
-  }
-
-  to {
-    transform: rotate(20deg) translateX(100px);
-
-  }
-}
-
-.stick-left {
-  animation-duration: 0.5s;
-  animation-name: move-leg-left;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes move-leg-right {
-  from {
-    transform: rotate(20deg) translateX(100px) translateY(0px);
-  }
-  
-  to {
-    transform: rotate(-20deg) translateX(-100px) translateY(0px);
-  }
-}
-
-.stick-right {
-  animation-duration: 0.5s;
-  animation-name: move-leg-right;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
