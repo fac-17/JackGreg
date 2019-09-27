@@ -11,8 +11,8 @@
 }
 
 #safe-zone {
-  border-top: 0.1em dashed red;
-  border-bottom: 0.1em dashed red;
+
+
   padding: 5vw;
   position: relative;
   top: -40vh;
@@ -35,57 +35,76 @@
 
 .hoopPosition1 {
   top: 0.6em;
+  transition: top 0.2s ease;
 }
 
 .hoopPosition2 {
   top: 1.2em;
-  left: 1em;
+  transition: top 0.2s ease;
+  /* left: 1em; */
 }
 
 .hoopPosition3 {
   top: 1.8em;
+  transition: top 0.2s ease;
 }
 
 .hoopPosition4 {
   top: 2.4em;
-  left: 1em;
+  transition: top 0.2s ease;
+  /* left: 1em; */
 }
 
 .hoopPosition5 {
   top: 3em;
-  right: 1em;
+  transition: top 0.1s ease;
+  /* right: 1em; */
 }
 
 .hoopPosition-1 {
   top: -0.6em;
-  left: 0.3em;
+  transition: top 0.1s ease;
+  /* left: 0.3em; */
 }
 
 .hoopPosition-2 {
   top: -1.2em;
+  transition: top 0.1s ease;
 }
 
 .hoopPosition-3 {
   top: -1.8em;
-  left: 1.2em;
+  /* left: 1.2em; */
+  transition: top 0.1s ease;
 }
 
 .hoopPosition-4 {
   top: -2.4em;
-  right: 0.6em;
+  /* right: 0.6em; */
+  transition: top 0.1s ease;
 }
 
 .hoopPosition-5 {
   top: -3em;
   right: 1.2em;
+  transition: top 0.1s ease;
 }
 
+@keyframes move-body {
+  from {
+    transform: skew(5deg, 5deg);
+  }
 
+  to {
+    transform: skew(-5deg, -5deg);
+  }
+}
 #stickman {
   animation-duration: 0.45s;
   animation-name: move-body;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  flex-shrink: 0;
 }
 @keyframes move-hoop {
   from {
