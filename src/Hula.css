@@ -88,18 +88,18 @@
 }
 
 .stickman {
-  animation-duration: 0.5s;
+  animation-duration: 0.45s;
   animation-name: move-body;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 @keyframes move-hoop {
   from {
-    transform: skew(5deg, 5deg);
+    transform: skew(5deg, 7deg);
   }
 
   to {
-    transform: skew(-5deg, -5deg);
+    transform: skew(-8deg, -5deg);
   }
 }
 
