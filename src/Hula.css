@@ -79,3 +79,28 @@
   top: -3em;
   right: 1.2em;
 }
+
+
+#stickman {
+  animation-duration: 0.45s;
+  animation-name: move-body;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes move-hoop {
+  from {
+    transform: skew(1deg, 2deg);
+  }
+
+  to {
+    transform: skew(-2deg, -1deg);
+  }
+}
+
+.hoop {
+  animation-duration: 0.3s;
+  animation-name: move-hoop;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
