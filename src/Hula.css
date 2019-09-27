@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
-  width: 100vw;
+  height: 60vh;
 }
 
 #avatar {
@@ -22,6 +21,12 @@
 
 #hula--body {
   margin-bottom: 10vh;
+  height: 70vh;
+  width: 100%;
+}
+
+#position--buttons {
+  margin-top: 5em;
 }
 
 #hula {

@@ -25,17 +25,17 @@ const Form = ({
   return (
     <section id="input-section">
       <form id="input-form">
-        <label htmlFor="username-form" class="input-form--element">
+        <label htmlFor="username-form" className="input-form--element">
           Username
         </label>
         <input
           id="username-form"
           type="text"
           value={username}
-          class="input-form--element"
+          className="input-form--element"
           onChange={event => setUsername(event.target.value)}
         />
-        <button onClick={handleSubmit} class="input-form--element">
+        <button onClick={handleSubmit} className="input-form--element">
           Choose
         </button>
       </form>
