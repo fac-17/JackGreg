@@ -1,19 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Ribeye&display=swap");
 
 .footer-container {
-  background-color: #c4c4c4;
+  background-image: url(./Header.svg);
+  background-repeat: repeat-x;
+  background-size: auto 18vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Ribeye", cursive;
-  height: 3rem;
 }
 
-.footer-elipses {
-  width: 100%;
-  position: relative;
-  top: 15px;
-}
 footer {
   position: fixed;
   bottom: 0;
